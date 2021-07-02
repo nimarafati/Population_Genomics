@@ -317,7 +317,8 @@ sub std_dev {
 
 open(outF2,">${inputFile}_${group1}_${group2}_tmp.Rscript");
 print outF2 "
-tmp<-read.table(\"${inputFile}_${group1}_${group2}_tmp.bed\",header=T)
+library(data.table)
+tmp<-fread(\"${inputFile}_${group1}_${group2}_tmp.bed\",header=T)
 chisq_result<-pchisq(tmp\$Chisq_Sum,1,lower.tail=F)
 tmp<-cbind.data.frame(tmp,log10_P_Value=-log10(chisq_result))
 pdf(\"${inputFile}_chisq_${group1}_${group2}.pdf\",width=10,height=6)
