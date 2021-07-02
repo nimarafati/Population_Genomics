@@ -264,7 +264,7 @@ while(<inF1>)
 			$group2_R_Freq= "NA"; #sprintf("%.3f",$group2_R_Obs/$group2_All);
 			$prop1_Sample= sprintf("%.2f",$cntr_1/$group1_Size);
 			$prop2_Sample= sprintf("%.2f",$cntr_2/$group2_Size);
-			print outF1 "$chr\t$start\t$end\t\t$group1_R_Freq\t$group2_R_Freq\t$prop1_Sample\t$prop2_Sample\t0";
+			print outF1 "$chr\t$start\t$end\t$group1_R_Freq\t$group2_R_Freq\t$prop1_Sample\t$prop2_Sample\t0";
 			foreach my $k (keys %group1_freq){
 				print outF1 "\tNA";
 			}
