@@ -1,10 +1,11 @@
 #!/usr/bin/perl
-#Nima Rafati 20170531
-#use warnings;
+########################################################
+# nimarafati@gmail.com	                               #
+# Please cite the script by referencing to github      #
+# repository 					       #
+########################################################
 use Getopt::Long;
-#use lib '~/PERL_LIB/lib/perl5';
-#use Statistics::Descriptive;
-#my $stat = Statistics::Descriptive::Full->new();
+
 
 my $minD=5;
 my $maxD_Norm=45;
@@ -13,7 +14,7 @@ my $GQ=0;
 my $prop_PASS=0.8;
 my @tmp_valArr=();
 my $contact="Nima Rafati nimarafati\@gmail.com
-V1	20170531	";
+Please cite the script by referencing to github	repository.\n";
 my $usage = "This script perform chi-squre test between two groups by providing following info:
 1- File including AD generated from GATK:VariantsToTable (Please make sure to use PASS SNPs where you have exluded missing calls. For this use \"--maxNoCall 0\" while running GATK:VariatsToTable)
 2- Two files listing samples to compare (one sample per line)
@@ -74,7 +75,6 @@ open(inF1,$inputFile) || die print $usage;
 while(<inF1>)
 {
 	$cntr++;
-#	print $cntr,"\n";
 	chomp($_);
 	@lineArr=split("\t",$_);
 	###########Identify the position of samples in depth file
