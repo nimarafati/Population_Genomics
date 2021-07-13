@@ -38,7 +38,6 @@ $contact\n";
 'maxD-to-Filter=i' =>\$maxD_Filt,
 'GQ=i' =>\$GQ,
 'prop-samples=f' =>\$prop_PASS);
-print "$prop_PASS $GQ $minD $max_Norm $nax_Filt"; <STDIN>;
 if($helpFlag eq "h" || $inputFile eq "" || $group1 eq "" || $group2 eq "")
 {
 	print $usage;
