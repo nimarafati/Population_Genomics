@@ -3,11 +3,13 @@
 In this repostiry you can find a collection of scripts used in studying population genetics differentiation. 
 
 **Muscle_FastTree.sh**. 
+
 By this script you can run multiple sequence alignment by **Muscle** and the generate tree by **FastTree**.  The generated tree can be visualised by tools such as **FigTree**.  
 Muscle_FastTree.sh sequence.Fa  
 Generated files are: sequence.muscle and sequence.tree. You will use sequence.tree for visualising the tree.  
 
 **extract-GT-V2-1-exclude-miss-called-positions-give-GT-too.pl**. 
+
 By this script you can extract genotypes in a vcf file in three formats:  
 "fasta" format 
 >ind1-1. 
